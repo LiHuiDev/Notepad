@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.notepad.AddNoteActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="完成" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/label_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:met_primaryColor="?attr/colorPrimary"
+                app:met_floatingLabel="highlight"
+                android:hint="请输入标题"
+                app:met_floatingLabelText="标题"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelTextColor="?attr/colorPrimary"/>
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/content_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label_edit_text"
+                android:lineSpacingExtra="4dp"
+                app:met_hideUnderline="true"
+                app:met_primaryColor="?attr/colorPrimary"
+                app:met_floatingLabel="highlight"
+                android:hint="请输入笔记内容"
+                app:met_floatingLabelText="笔记内容"
+                app:met_floatingLabelAlwaysShown="true"
+                app:met_floatingLabelTextColor="?attr/colorPrimary" />
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/isEncrypt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="加密"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/content_edit_text" />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/create_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="100dp"
+                android:layout_below="@+id/isEncrypt"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="demo" />
+    <version value="1" />
+
+    <list>
+        <mapping class="com.example.notepad.Bean.Note"></mapping>
+        <mapping class="com.example.notepad.Bean.User"></mapping>
+        <mapping class="com.example.notepad.Bean.Remind"></mapping>
+    </list>
+
+</litepal>
